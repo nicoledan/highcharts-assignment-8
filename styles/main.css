@@ -1,0 +1,43 @@
+* {
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #74BDB9;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  width:1000px;
+  height:400px;
+  background: #8DFCFC;
+  margin: auto;
+}
+
+#posts {
+  padding: 20px;
+  padding-left: 30px;
+  font-size: 110%;
+}
+
+
+article {
+  background: #3F7D7D;
+}
+
+section {
+  background: #8DFCFC; /* light blue */
+  width: 1000px;
+  margin: auto;
+}
+
+article > p {
+  text-align: center;
+}

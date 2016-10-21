@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> How is social media affecting political disourse? </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+  <script src="js/highcharts.js"></script>
+  <script src="js/themes/skies.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <h1>How do friends interact about politics on social media?</h1>
+
+  <article>
+  <section id="posts">
+    <p>By: Nicole Dan</p>
+  <p>Social media has changed the world we live in, to the point that it has an impact on politics. It has allowed presidential candidates to become more personal. Politicians see social media as the key to reaching young voters, who make up 21% of total voters. However, social media campaigning has it's risks, including making people disinteresting in voting. However, there is widespread agreement that social media is the way to reach young voters.
+  </p>
+  <p> Sources: <a href="http://pulitzercenter.org/reporting/social-media-role-young-voters-increase-future-US-elections-Obama-Facebook-Twitter"> Use it or Lose it: Social Media in the 2012 Election </a> </p>
+</section>
+
+<div id="container">
+  <script>
+  $(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Posts by friends on social media about politics and/or the 2012 election'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Answers',
+            colorByPoint: true,
+            data: [{
+                name: 'All or almost all of it',
+                y: 3
+            }, {
+                name: 'Most',
+                y: 6,
+            }, {
+                name: 'Some',
+                y: 30,
+            }, {
+                name: 'Just a little',
+                y: 36,
+            }, {
+                name: 'none at all',
+                y: 23,
+                }, {
+                name: 'Don\'t know',
+                y: 2
+            }]
+        }]
+    });
+});
+</script>
+</div>
+  <p> Data source: <a href="http://www.pewinternet.org/datasets/february-2012-search-social-networks-and-politics/"> Jan. 20-Feb. 19, 2012 – Search, Social Networks and Politics </a> </p>
+
+<div id="container2">
+  <script>
+  $(function () {
+    $('#container2').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'How people interact about politics on social media'
+        },
+        subtitle: {
+            text: 'Source: pewinternet.org'
+        },
+        xAxis: {
+            categories: [
+                'Friended or followed someone because you share their political views',
+                'Clicked the “like” button in response to POLITICAL comments or material posted by someone else',
+                'Posted a positive comment in response to a POLITICAL post or status update from someone else'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Percentage of People'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Yes, have done this',
+            data: [16, 47, 38]
+
+        }, {
+            name: 'No, have not done this',
+            data: [84, 52, 61]
+
+        }, {
+            name: 'Don\'t know',
+            data: [0,1,1]
+
+        }]
+    });
+});
+  </script>
+</div>
+  <p> Data source: <a href="http://www.pewinternet.org/datasets/february-2012-search-social-networks-and-politics/"> Jan. 20-Feb. 19, 2012 – Search, Social Networks and Politics </a> </p>
+</article>
+</body>
+</html>
